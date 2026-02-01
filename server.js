@@ -8,6 +8,9 @@ const app = express()
 
 app.use(cors())
 app.use(express.json())
+app.get("/", (req, res) => {
+  res.send("Rohan Web Designs Backend is Live 🚀");
+});
 
 app.post("/contact", async (req, res) => {
   const { name, email, message } = req.body
